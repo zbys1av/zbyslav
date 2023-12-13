@@ -1,8 +1,8 @@
 html{
   --dark-color: #212121;
   --bright-color: #ccc7b8;
-  // --temporaly: #a34b4f73;
-  --temporaly: transparent;
+  --temporaly: #a34b4f73;
+  // --temporaly: transparent;
   height: 100%;
   margin: 0;
   font-family: sans-serif;
@@ -12,10 +12,23 @@ body{
   margin: 0;
   height: 100%;
   background: var(--dark-color);
+  color: var(--bright-color);
 }
 
 .bold{
   font-weight: bold;
+}
+
+.section-title{
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.item{
+  padding: 5px 0 5px 0;
+  border-top: 2px solid var(--bright-color);
 }
 
 .app{
@@ -24,11 +37,12 @@ body{
 
 .container{
   margin: auto;
-  max-width: 1200px;
-  border-radius: 10px;
-  padding: 20px;
+  width: 100%;
+  // border-radius: 10px;
+  padding: 15px;
+  overflow: hidden;
 
-  background-color: var(--temporaly);
+  // background-color: var(--temporaly);
 }
 
 .header{
@@ -44,65 +58,71 @@ body{
 }
 
 .main{
-  &__box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--bright-color);
-    padding: 9vw 0vw 12vw 0;
-  }
-
-  &__name{
-    margin: 100px 0 50px 0;
-    background: var(--bright-color);
-    color: var(--dark-color);
-  }
-
-  &__fname{
+  &__title{
     font-size: 100px;
+    font-weight: bold;
     text-transform: uppercase;
     margin: 0;
+    padding: 0;
   }
 
-  &__lname{
-    text-transform: uppercase;
-    font-size: 21px;
-    margin: -20px 0 0 0;
-  }
-
-  &__info{
-    display: flex;
-    flex-direction: column;
-    max-width: 459px;
-  }
-}
-
-.information{
-  color: var(--bright-color);
-  &__box{
-    padding: 0 100px 0 100px;
-  }
-
-  &__main{
-
-  }
-
-  &__title{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 25px;
+  &__list{
+    border-top: 4px solid var(--bright-color);
   }
 
   &__item{
-    margin: 0 0 7px 0;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    border-top: 2px solid var(--bright-color);
+  }
+}
+
+.study{
+
+  &__where{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5px 0 5px 0;
+    border-top: 2px solid var(--bright-color);
   }
 
-  &__study{
+  &__item{
+    text-align: left;
+    width: 300px;
+    margin: 0;
 
+    &--year{
+      font-size: 20px;
+    }
+  }
+}
+
+.work{
+  &__section{
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__study-where{
-    margin: 0 0 25px 0;
+  &__item{
+    text-align: left;
+    width: 300px;
+    margin: 0;
+
+    &--years{
+      font-size: 20px;
+    }
+  }
+}
+
+.courses{
+  &__section{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item{
+    margin: 0;
+    width: 300px;
   }
 }
