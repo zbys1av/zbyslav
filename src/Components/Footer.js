@@ -32,9 +32,10 @@ function Footer(){
                     <div className="footer__contact-sections">
                         <a href="tel:+380631984073" className="footer__item footer__item--phone">+380 63 198 40 73</a>
                     </div>
-                    <p className="footer__info">made by zbys1av</p>
-                    <p className="footer__info footer__info--date">updated {dateString}</p>
-                    {/* https://api.github.com/repos/zbys1av/zbyslav */}
+                    <div className="footer__info-created">
+                        <p className="footer__info">made by <span className="footer__info--author">zbys1av</span></p>
+                        <p className="footer__info footer__info--date">updated {dateString}</p>
+                    </div>
                 </div>
             </div>
         </div>

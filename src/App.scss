@@ -2,6 +2,7 @@ html{
   --dark-color: #212121;
   --bright-color: #ccc7b8;
   --temporaly: #a34b4f73;
+  --highlight: #ffffff24;
   // --temporaly: transparent;
   height: 100%;
   margin: 0;
@@ -29,6 +30,26 @@ body{
 .item{
   padding: 5px 0 5px 0;
   border-top: 2px solid var(--bright-color);
+  transition: 0.9s;
+
+  &:hover{
+    transition: 0.9s;
+    font-size: 17px;
+    padding: 7px 0 7px 0;
+    background: var(--highlight);
+    cursor: default;
+  }
+}
+
+.info{
+  transition: 0.9s;
+  border-radius: 3px;
+  padding: 3px;
+
+  &:hover{
+    transition: 0.9s;
+    background: var(--dark-color);
+  }
 }
 
 .app{
@@ -182,6 +203,30 @@ body{
 
     &--phone{
       font-size: 22px;
+    }
+  }
+
+  &__info-created{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    margin-top: 50px;
+  }
+
+  &__info{
+    font-size: 13px;
+    margin: 0;
+
+    &--author{
+      transition: 0.7s;
+      &:hover{
+        cursor: pointer;
+        transition: 0.3s;
+        text-shadow: 0px 1px #c7ad70,
+        0px 2px #c79170,
+        0px 3px #d15353;
+      }
     }
   }
 }
