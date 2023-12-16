@@ -1,4 +1,5 @@
 import React from "react";
+import photo from "./img/photo.jpg"; 
 
 function Main(){
 
@@ -11,6 +12,7 @@ function Main(){
         <div className="main">
             <div className="container">
                 <div className="main__box">
+                    <img className="main__image" src={photo}></img>
                     <p className="main__title">Zbyslav Ostapiak</p>
                     <p className="main__item">born in <span className="bold">Lviv </span>/ Ukraine around <span className="bold">{age}</span> years ago</p>
                 </div>
