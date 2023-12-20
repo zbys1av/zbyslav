@@ -7,6 +7,11 @@ html{
   height: 100%;
   margin: 0;
   font-family: sans-serif;
+
+  ::selection {
+    background-color: var(--bright-color); 
+    color: var(--dark-color);
+  }
 }
 
 body{
@@ -30,12 +35,12 @@ body{
 .item{
   padding: 5px 0 5px 0;
   border-top: 2px solid var(--bright-color);
-  transition: 0.9s;
+  transition: 0.4s;
 
   &:hover{
-    transition: 0.9s;
-    font-size: 17px;
-    padding: 7px 0 7px 0;
+    transition: 0.4s;
+    // font-size: 17px;
+    padding: 9px 0 9px 0;
     background: var(--highlight);
     cursor: default;
   }
@@ -75,16 +80,23 @@ body{
     text-align: center;
     font-size: 16px;
     color: var(--bright-color);
+    user-select: none;
+    opacity: 30%;
   }
 }
 
 .main{
+  position: relative;
+  margin-top: 250px;
+
   &__title{
+    position: relative;
     font-size: 100px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    z-index: 3;
   }
 
   &__list{
@@ -95,6 +107,25 @@ body{
     margin: 0;
     padding: 10px 0 10px 0;
     border-top: 2px solid var(--bright-color);
+  }
+
+  &__image-link{
+    user-select: none;
+  }
+
+  &__image{
+    position: absolute;
+    z-index: 0;
+    width: 400px;
+    bottom: 77px;
+    opacity: 40%;
+    user-select: none;
+    transition: 0.6s;
+
+    &:hover{
+      transition: 0.6s;
+      opacity: 90%;
+    }
   }
 }
 
@@ -219,7 +250,10 @@ body{
     margin: 0;
 
     &--author{
+      text-decoration: none;
+      color: var(--bright-color);
       transition: 0.7s;
+
       &:hover{
         cursor: pointer;
         transition: 0.3s;
