@@ -154,6 +154,14 @@ body{
   &__section{
     display: flex;
     justify-content: space-between;
+
+    &--accordion{
+      flex-direction: column;
+    }
+  }
+
+  &__main-info-sec{
+    display: flex;
   }
 
   &__item{
