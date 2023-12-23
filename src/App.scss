@@ -155,13 +155,14 @@ body{
     display: flex;
     justify-content: space-between;
 
-    &--accordion{
+    &--accordion{    
       flex-direction: column;
     }
   }
 
   &__main-info-sec{
     display: flex;
+    justify-content: space-between;
   }
 
   &__item{
@@ -190,7 +191,17 @@ body{
 .language{
   &__section{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    
+    &--main{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    &--additional{
+      
+    }
   }
 
   &__item{
