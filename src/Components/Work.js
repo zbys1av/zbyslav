@@ -2,10 +2,15 @@ import React, {useState} from "react";
 
 function Work(){
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
     
-    function toggleAccordion(){
-        setIsOpen(!isOpen);
+    function toggleAccordionSupport(){
+        setIsOpen1(!isOpen1);
+    }
+
+    function toggleAccordionCall(){
+        setIsOpen2(!isOpen2);
     }
 
     return(
@@ -13,7 +18,7 @@ function Work(){
             <div className="container">
                 <div className="work__box">
                     <p className="work__title section-title bold">Work expirience</p>
-                    <div className="work__section work__section--accordion item" onClick={toggleAccordion}>
+                    <div className="work__section work__section--accordion item" onClick={toggleAccordionSupport}>
                         <div className="work__main-info-sec">
                             <p className="work__item work__item--years bold">04.2021 - 12.2023</p>
                             <p className="work__item work__item--position">Customer Support Representative</p>
@@ -21,7 +26,7 @@ function Work(){
                             <p className="work__item work__item--company">Boosta</p>
                         </div>
                         <div className="work__additional-info-sec">
-                            {isOpen && (
+                            {isOpen1 && (
                                 <p className="work__additional-info">
                                     As a Support Agent, my responsibilities included 
                                     live chats, which were the primary source of 
@@ -41,11 +46,24 @@ function Work(){
                         </div>
                     </div>
 
-                    <div className="work__section item">
-                        <p className="work__item work__item--years bold">06.2020 - 09.2020</p>
-                        <p className="work__item work__item--position">Call-center agent</p>
-                        <p className="work__item work__item--respon">calls</p>
-                        <p className="work__item work__item--company">Century Medical and Dental Center</p>
+                    <div className="work__section work__section--accordion item" onClick={toggleAccordionCall}>
+                        <div className="work__main-info-sec">
+                            <p className="work__item work__item--years bold">06.2020 - 09.2020</p>
+                            <p className="work__item work__item--position">Call-center agent</p>
+                            <p className="work__item work__item--respon">calls</p>
+                            <p className="work__item work__item--company">Century Medical and Dental Center</p>
+                        </div>
+                        <div className="work__additional-info-sec">
+                            {isOpen2 && (
+                                <p className="work__additional-info">
+                                    My responsibilities included handling both incoming 
+                                    and outgoing calls. The majority of the work was focused 
+                                    on addressing incoming calls from our customers. 
+                                    Additionally, I occasionally worked with outgoing calls, 
+                                    which involved tasks such as cold calling.
+                                </p>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
