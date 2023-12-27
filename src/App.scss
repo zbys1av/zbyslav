@@ -71,6 +71,18 @@ body{
   // background-color: var(--temporaly);
 }
 
+.snow{
+    // &::after{
+    //   content: '';
+    //   position: absolute;
+    //   display: block;
+    //   width: 100%;
+    //   height: 100px;
+    //   bottom: -635px;
+    //   background-image: linear-gradient(to bottom, rgba(255,0,0,0),var(--dark-color));
+    // }
+  }
+
 .header{
   &__box{
     
