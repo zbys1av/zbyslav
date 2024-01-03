@@ -4,8 +4,13 @@ function Work(){
 
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
+
+    function toggleAccordionCiklum(){
+        setIsOpen3(!isOpen3);
+    }
     
-    function toggleAccordionSupport(){
+    function toggleAccordionBoosta(){
         setIsOpen1(!isOpen1);
     }
 
@@ -18,7 +23,22 @@ function Work(){
             <div className="container">
                 <div className="work__box">
                     <p className="work__title section-title bold">Work expirience</p>
-                    <div className="work__section work__section--accordion item" onClick={toggleAccordionSupport}>
+                    <div className="work__section work__section--accordion item" onClick={toggleAccordionCiklum}>
+                        <div className="work__main-info-sec">
+                            <p className="work__item work__item--years bold">01.2024 - present</p>
+                            <p className="work__item work__item--position">Support Engineer</p>
+                            <p className="work__item work__item--respon">emails/tickets</p>
+                            <p className="work__item work__item--company">Ciklum</p>
+                        </div>
+                        <div className="work__additional-info-sec">
+                            {isOpen3 && (
+                                <p className="work__additional-info">
+                                    Nothing to say yet. Project - Bandcamp
+                                </p>
+                            )}
+                        </div>
+                    </div>
+                    <div className="work__section work__section--accordion item" onClick={toggleAccordionBoosta}>
                         <div className="work__main-info-sec">
                             <p className="work__item work__item--years bold">04.2021 - 12.2023</p>
                             <p className="work__item work__item--position">Customer Support Representative</p>

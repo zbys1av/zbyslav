@@ -13,6 +13,7 @@ import Courses from './Components/Courses';
 import Work from './Components/Work';
 import Footer from './Components/Footer';
 import Skills from './Components/Skills';
+import Projects from './Components/Projects';
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
   }
 
   const snowStyle = {
-    height: "220%",
+    height: "255%",
   }
 
   return (
@@ -34,11 +35,12 @@ function App() {
       {month ? <Snowfall snowflakeCount={50} style={snowStyle}/> : ""}
       <Header/>
       <Main/>
-      <Study/>
       <Work/>
+      <Study/>
       <Courses/>
       <Languages/>
       <Skills/>
+      <Projects/>
       <Footer/>
     </div>
   );

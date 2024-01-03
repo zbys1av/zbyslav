@@ -242,6 +242,34 @@ body{
   }
 }
 
+.projects{
+  &__section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    font-size: 20px;
+    height: 35px;
+    color: var(--bright-color);
+    text-decoration: none;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  &__name{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &__created-date{
+    margin-right: 35px;
+  }
+}
+
 .footer{
   &__contact-sections{
     &:nth-child(2){
