@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="zbyslav — досвід, освіта, навички та контакти.">
+  <title>zbyslav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#entries">Перейти до вмісту</a>
+
+  <div class="intro" id="intro" aria-hidden="true"><span id="life-days">1</span></div>
+
+  <!-- Fixed background photograph, displayed only while hovering or focusing the name. -->
+  <div class="image-backdrop" id="image-backdrop" aria-hidden="true">
+    <img id="preview-image" alt="" src="assets/zbyslav.jpg">
+  </div>
+
+  <main class="site-index">
+    <h1 class="sr-only">Zbyslav Ostapiak — резюме</h1>
+    <div class="index-header" aria-label="Заголовки індексу">
+      <button type="button" class="brand-trigger" id="brand-trigger" aria-label="zbyslav — показати фотографію">zbyslav</button>
+      <span class="col-title-blank" aria-hidden="true"></span>
+      <div class="filter-controls" role="group" aria-label="Сортування списку">
+        <button type="button" id="sort-type" data-sort="type" aria-pressed="false">Тип</button>
+        <button type="button" id="sort-date" data-sort="date" aria-pressed="false">Дата</button>
+      </div>
+      <span class="header-dot" aria-hidden="true">•</span>
+    </div>
+    <div class="entries" id="entries" aria-label="Пункти резюме"></div>
+  </main>
+
+  <!-- Idle time display: actual device-local time, over the existing list. -->
+  <div class="idle-clock" id="idle-clock" aria-hidden="true" inert>
+    <time id="clock-time" aria-label="Поточний локальний час">00:00</time>
+  </div>
+</body>
+</html>
